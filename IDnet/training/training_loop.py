@@ -179,7 +179,7 @@ def training_loop(
             misc.copy_params_and_buffers(resume_data[name], module, require_all=False)
 
     # load backbone
-    backbone_weights = torch.load("/data/fboutros/r50_webface_COSFace035/31614backbone.pth")
+    backbone_weights = torch.load("./31614backbone.pth")
     backbone.load_state_dict(backbone_weights)
 
     # Print network summary tables.
